@@ -2,7 +2,7 @@ import socket
 import select
 import sys
 
-host = "127.0.0.1"
+host = "71.197.136.100"
 port = 37560
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -26,9 +26,10 @@ while True:
     for socks in read_sockets:
         if socks == server:
             message = socks.recv(2048)
-            print (message)
+            print (message.decode())
         else:
-            message = input()
+            message = sys.stdin.readline()
+
             server.send(message.encode())
             print("<You>" + " %s"%message)
             sys.stdout.flush()
