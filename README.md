@@ -32,9 +32,10 @@ they aren't "subscribed" to (any channels of servers per say, or dms) that they 
 In code, the websocket server is started up, and then when the user connects to the server, the initial message of data
 consists of auth credentials. If the initial message checks out, the server will run the handler on the client's websocket.
 
-The handler will handle anything networking-wise for the client, whether they subscribe to certain streams,
+Handlers will handle anything networking-wise for the client, whether they subscribe to certain streams,
 send any relevant data to the client, and then also receive and respond with any data related to the client.
 This would simply include sending and receiving messages to the client, as well as managing that client's state in code and in the database.
+Handlers are split up as a multitude of functions available in the server-side code. 
 
 Every single client connection will be run on its individual thread; just about everything is programmed to be asynchronous. 
 
@@ -42,7 +43,7 @@ Every single client connection will be run on its individual thread; just about 
 
 "Circle" objects represent individual mini servers that can be privately or publicly made by clients in order to interact
 with other clients. Circles will essentially represent collections of streams, a state concerning the storing of user data
-individualized to that circle, and any data concerning that circle.
+individualized to that circle, and any other data concerning that circle.
 
 ### Storing and Managing Data
 
