@@ -9,7 +9,6 @@ The front-end is based on the Kivy framework, supported by websockets for connec
 ### Networking Backend
 **Utilizing Websockets**
 
-A simple connection is paired with an initial message filled with authentication data.
 The networking library is just the websockets library - may look into pairing an API as
 well as using flask-websockets.
 
@@ -30,8 +29,8 @@ they aren't "subscribed" to (any channels of servers per say, or dms) that they 
 
 ### Server architecture
 
-In code, the websocket server is started up, and then the user simply connects to the server, with its initial message
-of data being any authentication credentials. If the initial message checks out, the server will run the handler on the client's websocket.
+In code, the websocket server is started up, and then when the user connects to the server, the initial message of data
+consists of auth credentials. If the initial message checks out, the server will run the handler on the client's websocket.
 
 The handler will handle anything networking-wise for the client, whether they subscribe to certain streams,
 send any relevant data to the client, and then also receive and respond with any data related to the client.
