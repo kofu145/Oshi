@@ -8,12 +8,14 @@ The front-end is based on the Kivy framework, supported by websockets for connec
 
 ### Networking Backend
 **Utilizing Websockets**
+
 A simple connection is paired with an initial message filled with authentication data.
 The networking library is just the websockets library - may look into pairing an API as
 well as using flask-websockets.
 
 ### Accessing the Network
 **Making your own client**
+
 It's currently being implemented right now, so nothing here yet.
 
 ## How does it all work?
