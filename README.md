@@ -1,3 +1,5 @@
+# NOTE: Despite being quite planned out, this project has been dropped for a while - plan to pick it back up mid summer 2024
+
 # Oshi
 A chat application utilizing various methods (mainly websockets for now) for networking.
 Currently, various ones are being developed and tested.
